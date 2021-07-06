@@ -1,3 +1,34 @@
+<?php
+// Check for update.
+$fields = [
+    'user_id'   => 'ID',
+    'username'  => 'Username',
+    'password'  => 'Password',
+];
+
+// Set data.
+$data = [];
+
+// Loop through.
+foreach( $fields as $key => $field ) {
+
+    // Check.
+    if( !empty( $_POST[$key] ) ) {
+
+        // Add.
+        $data[$key] = $_POST[$key];
+
+    } else {
+
+        // Add.
+        $data[$key] = '';
+
+    }
+    
+}
+
+// Update user.
+update_option( 'rr_user', $data ); ?>
 <div id="rr-settings" class="rr-container">
     <div class="rr-inner">
         <div class="rr-left rr-bg-dred rr-color-white" style="background:url(<?php echo RR_URL . 'assets/rr-bg.jpg'; ?>) no-repeat;">
@@ -23,14 +54,8 @@
                         <form method="POST"><?php
 
                             // Get.
-                            $user = ( !empty( get_option( 'rr_user' ) ) ) ? get_option( 'rr_user' ) : '';
-
-                            // Set fields.
-                            $fields = [
-                                'user_id'   => 'ID',
-                                'username'  => 'Username',
-                                'password'  => 'Password',
-                            ];
+                            $user = ( !empty( $user ) ) ? $user : '';
+                            $user = ( empty( $user ) && !empty( get_option( 'rr_user' ) ) ) ? get_option( 'rr_user' ) : $user;
 
                             // Loop through.
                             foreach( $fields as $key => $field ) {
