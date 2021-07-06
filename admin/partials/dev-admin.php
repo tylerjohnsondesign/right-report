@@ -6,8 +6,8 @@ $fields = [
     'password'  => 'Password',
 ];
 
-// Set data.
-$data = [];
+// Set user.
+$user = get_option( 'rr_user' );
 
 // Loop through.
 foreach( $fields as $key => $field ) {
@@ -16,19 +16,14 @@ foreach( $fields as $key => $field ) {
     if( !empty( $_POST[$key] ) ) {
 
         // Add.
-        $data[$key] = $_POST[$key];
-
-    } else {
-
-        // Add.
-        $data[$key] = '';
+        $user[$key] = $_POST[$key];
 
     }
     
 }
 
 // Update user.
-update_option( 'rr_user', $data ); ?>
+update_option( 'rr_user', $user ); ?>
 <div id="rr-settings" class="rr-container">
     <div class="rr-inner">
         <div class="rr-left rr-bg-dred rr-color-white" style="background:url(<?php echo RR_URL . 'assets/rr-bg.jpg'; ?>) no-repeat;">
@@ -54,7 +49,6 @@ update_option( 'rr_user', $data ); ?>
                         <form method="POST"><?php
 
                             // Get.
-                            $user = ( !empty( $user ) ) ? $user : '';
                             $user = ( empty( $user ) && !empty( get_option( 'rr_user' ) ) ) ? get_option( 'rr_user' ) : $user;
 
                             // Loop through.
@@ -68,7 +62,7 @@ update_option( 'rr_user', $data ); ?>
 
                                 // Set type.
                                 $type = ( $key == 'password' ) ? 'password' : 'text'; ?>
-                            <label for="<?php echo $key; ?>"><?php echo $field; ?></label><input type="<?php echo $type; ?>" name="<?php echo $key; ?>" value="<?php echo $value; ?>" placeholder="<?php echo $place; ?>" /><br><?php
+                                <label for="<?php echo $key; ?>"><?php echo $field; ?></label><input type="<?php echo $type; ?>" name="<?php echo $key; ?>" value="<?php echo $value; ?>" placeholder="<?php echo $place; ?>" /><br><?php
                                 
                             } ?>
                             <input type="submit" value="Save" />
