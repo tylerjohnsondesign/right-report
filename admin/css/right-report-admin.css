@@ -1,0 +1,293 @@
+/**
+ * Colors.
+ */
+.rr-bg-dred {
+    background: #A81B29;
+}
+
+.rr-bg-lred {
+    background: #F80040;
+}
+
+.rr-bg-white {
+    background: #fff;
+}
+
+.rr-bg-light {
+    background: #f4f4f4;
+}
+
+.rr-color-dred {
+    color: #A81B29;
+}
+
+.rr-color-lred {
+    color: #F80040;
+}
+
+.rr-color-white {
+    color: #fff;
+}
+
+.rr-color-light {
+    color: #f4f4f4;
+}
+
+/** 
+ * Align.
+ */
+.rr-text-center {
+    text-align: center;
+}
+
+/**
+ * Branding.
+ */
+.rr-branding-light svg g#first-r rect, 
+.rr-branding-light svg g#first-r path, 
+.rr-branding-light svg g#report path  {
+    fill: #f4f4f4;
+}
+
+.rr-branding-light svg #last-r, .rr-branding-light svg g#right path {
+    fill: #fff;
+}
+
+div#rr-settings {
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 10px;
+    height: 100vh;
+}
+
+div#rr-settings > .rr-inner {
+    flex: 1;
+    box-shadow: 0 7px 15px -15px rgb(0 0 0 / 50%), inset 0 0 1px rgb(0 0 0 / 70%);
+    margin: 30px 0;
+    min-height: 80%;
+    background: #fff;
+    border-radius: 4px;
+}
+
+/**
+ * Panels.
+ */
+.rr-inner {
+    display: flex;
+    align-items: stretch;
+}
+
+.rr-right, .rr-left, .rr-branding {
+    padding: 30px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.rr-left {
+    max-width: 360px;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.rr-branding {
+    justify-content: center;
+}
+
+.rr-branding svg {
+    max-width: 90%;
+    height: auto;
+}
+
+/**
+ * Content.
+ */
+.rr-content p {
+    font-size: 12px;
+}
+
+.rr-content p.rr-lead {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.rr-form {
+    display: block;
+    flex: 1;
+}
+
+div#rr-settings h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+div#rr-settings, div#rr-settings p {
+    font-size: 16px;
+}
+
+.rr-form-lead h2 {
+    margin: 0;
+}
+
+.rr-form-lead p {
+    opacity: 0.75;
+}
+
+.rr-form-lead {
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    margin-bottom: 30px;
+}
+
+form#rr-register-form {
+    display: grid;
+    grid: auto-flow dense / 1fr 1fr;
+    grid-gap: 15px;
+}
+
+form#rr-register-form .rr-field-full {
+    grid-column: 1 / -1;
+}
+
+.rr-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.rr-field label {
+    opacity: .75;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.rr-field input, .rr-field select {
+    width: 100%;
+    display: block;
+    min-width: 100%;
+    padding: 5px;
+    border-color: rgb(0 0 0 / 0.3);
+}
+
+.rr-field input:focus, .rr-field select:focus {
+    outline-color: #ff000000;
+    box-shadow: none;
+    border-color: #F80040;
+}
+
+input.rr-submit {
+    max-width: 300px;
+    background: #A81B29;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px;
+    border: 2px solid #A81B29;
+    font-size: 16px;
+    letter-spacing: .5px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+input.rr-submit:hover {
+    background: rgb(255 255 255 / 0%);
+    border-color: #F80040;
+    color: #F80040;
+}
+
+.rr-customer.rr-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rr-customer.rr-loading #Layer_1 {
+    width: 300px;
+    height: 105px;
+}
+
+.rr-customer.rr-loading svg {
+    margin: 0 !important;
+}
+
+span.rr-form-bubble {
+    background: green;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    vertical-align: bottom;
+    margin-left: 10px;
+    border: 1px solid #00ba00;
+}
+
+.rr-form-section {
+    background: #fff;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 30px;
+    box-shadow: 0 5px 5px -5px rgb(0 0 0 / 20%);
+}
+
+.rr-form-body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rr-form-body > div {
+    width: calc(50% - 75px);
+}
+
+.rr-form-body > div.rr-form-section-full {
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+.rr-form-section-cancel {
+    margin: 0;
+}
+
+.rr-form-section p {
+    margin-bottom: 0;
+}
+
+span.rr-form-label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+span.rr-form-value {
+    margin-left: 15px;
+}
+
+.rr-form-section-login span.rr-form-value span {
+    background: #F80040;
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.rr-form-section-login span.rr-form-value span {
+    background: #A81B29;
+}
+
+span.show-pass {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: rgb(0 0 0 / 30%);
+    padding: 3px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.rr-inner a {
+    color: #F80040;
+}
