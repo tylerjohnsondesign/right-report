@@ -8,7 +8,7 @@
  * Plugin Name:       Right Report
  * Plugin URI:        https://rightreport.com
  * Description:       Connect to RightReport.com, so that you can share your content and have your content shared for greater reach and engagement.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Right Report
  * Author URI:        https://rightreport.com
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'RR_VERSION', '0.0.016' );
+define( 'RR_VERSION', '1.0.1' );
 define( 'RR_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'RR_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
@@ -68,7 +68,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-right-report.php';
  */
 require plugin_dir_path( __FILE__ ) . 'updates/plugin-update-checker.php';
 $updates = Puc_v4_Factory::buildUpdateChecker(
-	'',
+	'https://github.com/tylerjohnsondesign/right-report',
 	__FILE__,
 	'right-report'
 );
