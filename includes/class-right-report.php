@@ -52,6 +52,7 @@ class Right_Report {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
+
 		if ( defined( 'RIGHT_REPORT_VERSION' ) ) {
 			$this->version = RIGHT_REPORT_VERSION;
 		} else {
@@ -120,6 +121,11 @@ class Right_Report {
 		 * Helpers.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-right-report-helpers.php';
+
+		/**
+		 * Widget.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-widget.php';
 
 		$this->loader = new Right_Report_Loader();
 

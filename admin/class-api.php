@@ -334,5 +334,26 @@ class Right_Report_API {
 
     }
 
+    /**
+     * Get recent.
+     */
+    public function recent() {
+
+        // Set args.
+        $args = [
+            'timeout'   => 60,
+        ];
+
+        // Use wp_remote_get.
+        $response = wp_remote_get( $this->api . 'recent', $args );
+
+        // Decode response.
+        $response = json_decode( wp_remote_retrieve_body( $response ), true );
+
+        // Return.
+        return $response;
+
+    }
+
 }
 new Right_Report_API;

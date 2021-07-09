@@ -7,7 +7,7 @@
             <p class="rr-lead">
                 Join the #1 Conservative Aggregator Network and start increasing your traffic today!
             </p>
-            <p>By joining, you agree to pay $50 a month be a member of the Right Report network. You agree that our widget/plugin will appear in the top right column of your website. You can cancel at anytime. Must be a website built on WordPress in order to join.</p>
+            <p>By joining, you agree to pay $15 a month be a member of the Right Report network. You agree that our widget/plugin will appear in the top right column of your website. You can cancel at anytime. Must be a website built on WordPress in order to join.</p>
         </div>
     </div>
 </div>
