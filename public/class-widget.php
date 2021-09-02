@@ -140,7 +140,25 @@ class Right_Report_Widget extends WP_Widget {
                 </div>
 
             </div>
-            <style>.right-report-articles{float:left}.right-report-article{display:flex;border-bottom:1px solid rgb(0 0 0 / 20%);margin-bottom:10px;padding-bottom:5px}.right-report-article>div{flex:1}.right-report-image{max-width:100px}.right-report-title{font-weight:700;line-height:1.2}.right-report-meta>span{font-size:12px;text-transform:uppercase}</style><?php
+            <style>.right-report-articles{float:left}.right-report-article{display:flex;border-bottom:1px solid rgb(0 0 0 / 20%);margin-bottom:10px;padding-bottom:5px}.right-report-article>div{flex:1}.right-report-image{max-width:100px}.right-report-title{font-weight:700;line-height:1.2}.right-report-meta>span{font-size:12px;text-transform:uppercase}</style>
+            
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1HEKG2JXV"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-S1HEKG2JXV', { 'groups': 'rightreport'});
+
+            // Set.
+            jQuery('.right-report-article a').on('click', function() {
+                // Get href.
+                var href = $(this).attr('href');
+                // Log.
+                gtag('event', href, { 'send_to': 'rightreport' });
+            });
+            </script><?php
 
         }
 

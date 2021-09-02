@@ -8,7 +8,7 @@
  * Plugin Name:       Right Report
  * Plugin URI:        https://rightreport.com
  * Description:       Connect to RightReport.com, so that you can share your content and have your content shared for greater reach and engagement.
- * Version:           1.0.4
+ * Version:           1.0.5
  * Author:            Right Report
  * Author URI:        https://rightreport.com
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'RR_VERSION', '1.0.4' );
+define( 'RR_VERSION', '1.0.5' );
 define( 'RR_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'RR_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
